@@ -1,0 +1,28 @@
+What I have done:
+
+- Create a virtual env using "python3.8 -m venv midi" -- 3.8 is for dependency issues
+- Run "source midi/bin/activate"
+- Installed "pip install mido" to control midi keyboards
+- For installing p5, git clone the project source code, go to requirements.txt and delete:
+  PyOpenGL-accelerate==3.1.7 ... This package seems most likely as an optimization package for speed
+- Then do: pip install p5 --no-dependencies
+https://github.com/p5py/p5/issues/439
+  
+Note, as of now, there doesn't seem to be any quick fixes for the problem on mac sillicon, so this
+will have to work for now as a proof of concept ... I also tried on my other device, but the package
+pyopengl-accelerate is not well-maintained for latest version of python and evern this one ... If 
+I encouter problems, I will try to really figure it out.
+
+While working with p5:
+- Stop yabai: yabai --stop-service
+- To restart: yabai --start-service
+* A bit disappointing but it is what it is. This is not solvable, as yabai registered this as the
+terminal app, so I can't locally disable the window
+
+Other librarie installed: python-rtmidi
+
+As of 11:32 Aug 22:
+- Got moving, resizing to be working
+- I installed sounddevice
+- Using holding behavior for moving
+- Got microphone reaction to be working
